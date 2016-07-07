@@ -8,7 +8,6 @@
 # Site Settings
 locale                   : "en"
 title                    : "Site Title"
->>>>>>> upstream/master
 title_separator          : "-"
 name                     : "David Watson"
 description              : "Monumental Ideas and Trivial Ramblings"
