@@ -118,14 +118,14 @@
 
   /* social buttons */
 
-  $soso:
+  $social:
   (facebook, $facebook-color),
   (twitter, $twitter-color),
   (google-plus, $google-plus-color),
   (linkedin, $linkedin-color);
 
-  @each $sosonetwork, $color in $soso {
-    &--#{$sosonetwork} {
+  @each $socialnetwork, $color in $social {
+    &--#{$socialnetwork} {
       background-color: $color;
 
       &:hover {
