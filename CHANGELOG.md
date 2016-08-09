@@ -1,3 +1,51 @@
+## [3.3.7](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.7)
+
+### Bug Fixes
+
+- Re-enabled Jekyll plugins in `_config.yml` in case they aren't autoloaded in `Gemfile`. [#417](https://github.com/mmistakes/minimal-mistakes/issues/417)
+
+### Enhancements
+
+- Fallback to `site.github.url` for use in `{{ base_path }}` when `site.url` is `nil`.
+- Replace Sass and Autoprefixer `npm` build scripts with [Jekyll's built-in asset support](https://jekyllrb.com/docs/assets/). [#333](https://github.com/mmistakes/minimal-mistakes/issues/333)
+
+### Maintenance
+
+- Document `site.repository` and its role with [`github-metadata`](https://github.com/jekyll/github-metadata) gem.
+- Add sample [archive page with content](https://mmistakes.github.io/minimal-mistakes/archive-layout-with-content/) for testing styles on demo site.
+
+## [3.3.6](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.6)
+
+### Bug Fixes
+
+- Fix blank `site.teaser` bug [#412](https://github.com/mmistakes/minimal-mistakes/issues/412)
+
+## [3.3.5](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.5)
+
+### Enhancements
+
+- Add English default text `site.locale` strings [#407](https://github.com/mmistakes/minimal-mistakes/issues/407)
+- Add Portuguese localized UI text. [#411](https://github.com/mmistakes/minimal-mistakes/pull/411)
+- Add Italian localized UI text. [#409](https://github.com/mmistakes/minimal-mistakes/pull/409)
+
+### Maintenance
+
+- Remove unused Google AdSense variables in `_config.yml` [#404](https://github.com/mmistakes/minimal-mistakes/issues/404)
+- Update `Gemfile` instructions for using `github-pages` vs. native `jekyll` gems.
+- Disable `gems:` in `_config.yml` and enable plugins with Bundler instead.
+- Add `repository` to `_config.yml` to suppress GitHub Pages error `Liquid Exception: No repo name found.`
+
+## [3.3.4](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.4)
+
+### Enhancements
+
+- Add support for configurable feed URL to use a service like FeedBurner instead of linking directly to `feed.xml` in `<head>` and the site footer. [#378](https://github.com/mmistakes/minimal-mistakes/issues/378), [#379](https://github.com/mmistakes/minimal-mistakes/pull/379), [#406](https://github.com/mmistakes/minimal-mistakes/pull/406)
+- Add Turkish localized UI text. [#403](https://github.com/mmistakes/minimal-mistakes/pull/403)
+
+### Maintenance
+
+- Update gems: `activesupport` (4.2.7), `ffi` (1.9.14), `github-pages` (88), `jekyll-redirect-from` (0.11.0), `jekyll-watch` (1.5.0).
+
 ## [3.3.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.3)
 
 ### Enhancements
