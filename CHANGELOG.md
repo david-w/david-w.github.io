@@ -1,3 +1,25 @@
+## [3.4.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.2)
+
+### Enhancements
+
+- Improve UX of static comment forms. [#448](https://github.com/mmistakes/minimal-mistakes/issues/448)
+
+## [3.4.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.1)
+
+### Enhancements
+
+- Add `staticman.filename` configuration with UNIX timestamp for sorting data files. example ~> `comment-1470943149`.
+
+### Bug Fixes
+
+- Don't add `<a>` to author name if URL is blank.
+
+## [3.4.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.0)
+
+### Enhancements
+
+- Support static-based commenting via [Staticman](https://staticman.net/) for sites hosted with GitHub Pages. [#424](https://github.com/mmistakes/minimal-mistakes/issues/424)
+
 ## [3.3.7](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.7)
 
 ### Bug Fixes
@@ -18,19 +40,19 @@
 
 ### Bug Fixes
 
-- Fix blank `site.teaser` bug [#412](https://github.com/mmistakes/minimal-mistakes/issues/412)
+- Fix blank `site.teaser` bug. [#412](https://github.com/mmistakes/minimal-mistakes/issues/412)
 
 ## [3.3.5](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.5)
 
 ### Enhancements
 
-- Add English default text `site.locale` strings [#407](https://github.com/mmistakes/minimal-mistakes/issues/407)
+- Add English default text `site.locale` strings. [#407](https://github.com/mmistakes/minimal-mistakes/issues/407)
 - Add Portuguese localized UI text. [#411](https://github.com/mmistakes/minimal-mistakes/pull/411)
 - Add Italian localized UI text. [#409](https://github.com/mmistakes/minimal-mistakes/pull/409)
 
 ### Maintenance
 
-- Remove unused Google AdSense variables in `_config.yml` [#404](https://github.com/mmistakes/minimal-mistakes/issues/404)
+- Remove unused Google AdSense variables in `_config.yml`. [#404](https://github.com/mmistakes/minimal-mistakes/issues/404)
 - Update `Gemfile` instructions for using `github-pages` vs. native `jekyll` gems.
 - Disable `gems:` in `_config.yml` and enable plugins with Bundler instead.
 - Add `repository` to `_config.yml` to suppress GitHub Pages error `Liquid Exception: No repo name found.`
