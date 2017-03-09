@@ -4,8 +4,70 @@ permalink: /docs/history/
 excerpt: "Change log of enhancements and bug fixes made to the theme."
 sidebar:
   nav: docs
-modified: 2016-12-21T23:04:51-05:00
+modified: 2017-02-28T10:35:04-05:00
 ---
+
+## [4.3.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.3.0)
+
+### Enhancements
+
+- Add workaround to allow theme gem's `/assets/js/main.min.js` file to be overridden by a local version. Simply add the following YAML Front Matter to the file:
+  
+  ```
+  ---
+  layout: 
+  ---
+  ```
+
+  Any local customizations you make to `/assets/js/main.min.js` should now replace the theme gem's version.
+
+## [4.2.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.2.2)
+
+### Enhancements
+
+- Update [Greedy Navigation](https://github.com/lukejacksonn/GreedyNav) to flexbox version to make it more flexible when dealing with long site titles (`site.title`). [#836](https://github.com/mmistakes/minimal-mistakes/issues/836)
+- Adjust `box-shadow` in navigation and author sidebar. [#576](https://github.com/mmistakes/minimal-mistakes/pull/576)
+- Add Russian, Korean, and zh-TW localized UI text. [#815](https://github.com/mmistakes/minimal-mistakes/issues/815) [#834](https://github.com/mmistakes/minimal-mistakes/pull/834) [#838](https://github.com/mmistakes/minimal-mistakes/pull/838)
+
+### Bug Fixes
+
+- Fix Discourse embedded comments bug. [#823](https://github.com/mmistakes/minimal-mistakes/issues/823)
+- Fix `seo_author` default value in `seo.html` and add `author` meta. [#858](https://github.com/mmistakes/minimal-mistakes/pull/858)
+
+### Maintenance
+
+- Add theme meta info to `_layouts/default.html` and `main.css`.
+- Update README.
+- Improve the pagination and taxonomy archive documentation. [#826](https://github.com/mmistakes/minimal-mistakes/pull/826)
+- Add comments to `/docs/_config.yml` to clarify use of YAML references. [#847](https://github.com/mmistakes/minimal-mistakes/pull/847)
+
+## [4.2.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.2.1)
+
+### Enhancements
+
+- Improve `paginator.html` to support paginated pages that live inside of a subfolder. See [documentation](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#home-page) for more details. [#764](https://github.com/mmistakes/minimal-mistakes/pull/764/)
+
+### Maintenance
+
+- Add `https` protocol to Google Universal Analytics embed. [#772](https://github.com/mmistakes/minimal-mistakes/pull/772)
+
+## [4.2.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.2.0)
+
+### Enhancements
+
+- Add `video` helper (for YouTube/Vimeo) and video headers to `single`, `archive`, and `splash` layouts. [#788](https://github.com/mmistakes/minimal-mistakes/pull/788)
+- Add missing simplified Chinese localized UI text strings. [#747](https://github.com/mmistakes/minimal-mistakes/pull/747)
+- Add Nepali (Nepalese) localized UI text strings. [#785](https://github.com/mmistakes/minimal-mistakes/pull/785)
+- Remove borders from table elements found in Google Custom Search Engine widget. [#759](https://github.com/mmistakes/minimal-mistakes/issues/759)
+
+### Bug Fixes
+
+- Remove `position: sticky` JavaScript polyfill and fallback to default positioning for browsers that don't support it. [#752](https://github.com/mmistakes/minimal-mistakes/issues/752)
+
+### Maintenance
+
+- Fix invalid Google Universal Analytics example in documentation. [#783](https://github.com/mmistakes/minimal-mistakes/pull/783)
+- Bump `jekyll-sitemap` gem dependency to (1.0).
 
 ## [4.1.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.1.1)
 
