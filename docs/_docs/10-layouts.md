@@ -101,7 +101,7 @@ Essentially the same as `single` with markup adjustments and some modules remove
 Below are sample archive pages you can easily drop into your project, taking care to rename `permalink`, `title`, or the filename to fit your site. Each is 100% compatible with GitHub Pages.
 
 * [All Posts Grouped by Category -- List View][posts-categories]
-* [All Posts Grouped by Tags -- List View][posts-tags]
+* [All Posts Grouped by Tag -- List View][posts-tags]
 * [All Posts Grouped by Year -- List View][posts-year]
 * [All Posts Grouped by Collection -- List View][posts-collection]
 * [Portfolio Collection -- Grid View][portfolio-collection]
@@ -179,7 +179,7 @@ The **Tags Archive** page that responds to urls such as `/tags/#tips` looks some
 ---
 layout: archive
 permalink: /tags/
-title: "Posts by Tags"
+title: "Posts by Tag"
 author_profile: true
 ---
 
@@ -271,6 +271,14 @@ For externally hosted images include the full image path instead of just the fil
 ```yaml
 header:
   image: http://some-site.com/assets/images/image.jpg
+```
+
+To provide a custom alt tag for screen readers:
+
+```yaml
+header:
+  image: /assets/images/unsplash-image-1.jpg
+  image_description: "A description of the image"
 ```
 
 To include a caption or attribution for the image:
