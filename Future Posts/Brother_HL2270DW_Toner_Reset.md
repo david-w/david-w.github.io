@@ -1,3 +1,10 @@
+So I handle all the IT where I work.  I took a day off, and when I returned the next day the shipping / receiving person came to me and said he had a printer problem that I needed to look at. He added that it was not urgent because he was able to print since he borrowed the owner's printer.  **HUH?**
+
+The printer in question is a Brother, model HL2270DW.  Apparently, the printer stopped working and reported the toner was out. 
+
+
+
+
 Please do the following steps to reset the toner sensor.
 
 - Open the front cover and leave open while completing the following steps.
