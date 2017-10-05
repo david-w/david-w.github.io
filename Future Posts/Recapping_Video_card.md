@@ -16,7 +16,8 @@ So I busted out this old thing:
 
 PIC OF SOLDERING GUN
 
-Yes, I know that's not the right tool for the job but I don't normally do electronics work so I don't have a soldering station. I also know it's never a good idea to use old capacitors to replace old failed capacitors. But I had nothing to lose really. 
+Yes, I know that's not the right tool for the job but I don't normally do electronics work so I don't have a soldering station. I also know it's never a good idea to use old capacitors to replace old failed capacitors. But I had nothing to lose really the card was already broken.
+I really like old tools. I have three newer soldering guns that don't work anywhere near as good as this old one. It gets red hot very fast. (and makes the room lights dim!)  Everything I read about re-capping boards said you have to have a hot iron and work quickly. Heat can distroy components.
 
 I was able to dig up an old motherboard that had the right value capacitors that still looked good.  So I de-soldered them.  
 
@@ -26,10 +27,12 @@ Then took the failed capacitors off the video card.
 
 PIC OF CARD NO CAPS
 
-Cleaned up the holes in the board carefully with this needle.
+Cleaned up the holes in the board carefully with a sewing needle.
 
 PIC OF NEEDLE AND LOOP
 
 And finally, soldered the capacitors on the card.  
 
 PIC OF FIXED CARD
+
+Not bad for the first time soldering on a board.  Oh, and now the card works flawlessly.
