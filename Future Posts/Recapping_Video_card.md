@@ -9,7 +9,7 @@ Then, it stopped working completely. On startup, as soon as the kernel loaded th
 PIC OF CARD
 
 
-So I needed a new video card. However there are only a few video cards that work in this box with the specific OS I need to run, none of which are still manufactured.  I was able to pick up two used cards on the cheap, but it would take a couple of days to get them. 
+So I needed a new video card. However there are only a few video cards that work in this box with the specific OS I need to run, none of which are still manufactured.  I was able to pick up two used cards on the cheap, but it would take a couple of days to get them.
 
 Like I said, I was in a jam.
 So I busted out this old thing:
@@ -17,13 +17,13 @@ So I busted out this old thing:
 PIC OF SOLDERING GUN
 
 Yes, I know that's not the right tool for the job but I don't normally do electronics work so I don't have a soldering station. I also know it's never a good idea to use old capacitors to replace old failed capacitors. But I had nothing to lose really the card was already broken.
-I really like old tools. I have three newer soldering guns that don't work anywhere near as good as this old one. It gets red hot very fast. (and makes the room lights dim!)  Everything I read about re-capping boards said you have to have a hot iron and work quickly. Heat can distroy components.
+I really like old tools. I have three newer soldering guns that don't work anywhere near as good as this old one. It gets red hot very fast. (and makes the room lights dim!)  Everything I read about re-capping boards said you have to have a hot iron and work quickly. Heat can destroy components.
 
 I was able to dig up an old motherboard that had the right value capacitors that still looked good.  So I de-soldered them.  
 
 PIC OF OLD CAPS AND NEW CAPS
 
-Then took the failed capacitors off the video card. 
+Then took the failed capacitors off the video card.
 
 PIC OF CARD NO CAPS
 
