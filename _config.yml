@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
+minimal_mistakes_skin    : "air" # "default", "air", "contrast", "dark", "dirt", "mint", "sunrise"
 
 # Site Settings
 locale                   : "en"
@@ -86,7 +86,7 @@ author:
   name             : "David Watson"
   avatar           : "/assets/images/dw.jpg"
   bio              : ""
-  location         : ""
+  location         : "Exton, PA"
   email            : "drupaldave@gmail.com"
   uri              :
   bitbucket        :
