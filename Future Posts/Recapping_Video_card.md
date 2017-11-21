@@ -4,7 +4,7 @@ The complete tale is long and boring, but I'll try to give you the super condens
 
 Starting up in safe mode doesn't load all the kernel extensions, and that worked for a week or two.  Some theorized that there was an OS update that was not compatible with the older video hardware that was in this box (NVIDIA GeForce 7300 GT).  I'm guessing it just temporarily took some load off the card which made it work better for a while.
 
-Then, it stopped working completely. On startup, as soon as the kernel loaded the video, the display would flash.  I pulled the card out and saw this:
+Then, it stopped working completely. On startup, as soon as the kernel loaded the video, the display would flash like a strobe light.  I pulled the card out and saw this:
 
 PIC OF CARD
 
@@ -16,7 +16,7 @@ So I busted out this old thing:
 
 PIC OF SOLDERING GUN
 
-Yes, I know that's not the right tool for the job but I don't normally do electronics work so I don't have a soldering station. I also know it's never a good idea to use old capacitors to replace old failed capacitors. But I had nothing to lose really the card was already broken.
+Yes, I know that's not the right tool for the job but I don't normally do electronics work so I don't have a soldering station. I also know it's never a good idea to use old capacitors to replace old failed capacitors. But I had nothing to lose since the card was already broken.
 I really like old tools. I have three newer soldering guns that don't work anywhere near as good as this old one. It gets red hot very fast. (and makes the room lights dim!)  Everything I read about re-capping boards said you have to have a hot iron and work quickly. Heat can destroy components.
 
 I was able to dig up an old motherboard that had the right value capacitors that still looked good.  So I de-soldered them.  

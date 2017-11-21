@@ -1,6 +1,6 @@
 ## Mazda CX-9 3.7L Fuel Injector Replacement
 
-As I was leaving work yesterday, as soon as I started my car I felt it.  By "it" I mean a misfire.  I won't explain the feeling because if you are reading about how to replace an injector, then you already know what I'm talking about.  
+As I was leaving work yesterday, I felt it as soon as I started my car.  By "it" I mean a misfire.  I won't explain the feeling because if you are reading this, then you likely already know what I'm talking about.  
 
 So it was running on 5 cylinders. I had somewhere important to be, so I had to think fast. 9 times out of 10 on newer model cars, a non-firing cylinder means a bad coil which is an easy fix.  
 
@@ -12,4 +12,4 @@ Today, I borrowed a car to get to work and I picked up the parts.  It's not very
 
 1. Take the fuel cap off, unless you want a face full of gas when you disconnect the fuel rail.  Also disconnect the battery.
 
-2. Remove the air box. 
+2. Remove the air box.
