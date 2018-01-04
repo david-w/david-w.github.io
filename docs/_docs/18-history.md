@@ -4,7 +4,7 @@ permalink: /docs/history/
 excerpt: "Change log of enhancements and bug fixes made to the theme."
 sidebar:
   nav: docs
-last_modified_at: 2017-12-11T12:39:02-05:00
+last_modified_at: 2018-01-04T14:29:43-05:00
 toc: true
 ---
 
@@ -12,7 +12,32 @@ toc: true
 
 ### Enhancements
 
+* Add `show_overlay_excerpt` for disabling overlay image excerpt text. [#1436](https://github.com/mmistakes/minimal-mistakes/pull/1436)
+* Update remote theme installation instructions in Quick Start Guide. [#1439](https://github.com/mmistakes/minimal-mistakes/pull/1439)
+* Reduce visual weight of code blocks.
+* Lunr.js Greek stemmer. [#1445](https://github.com/mmistakes/minimal-mistakes/pull/1445)
+* Update Font Awesome 5 [SVG with JavaScript version](https://fontawesome.com/how-to-use/svg-with-js). [#1446](https://github.com/mmistakes/minimal-mistakes/pull/1446)
+  - Note: if Font Awesome icons are were used in the content of post/pages or custom table of contents, find and replace any icons that have different names between version 4 and 5. Make sure to read the [complete list](https://fontawesome.com/how-to-use/upgrading-from-4#icon-name-changes-full) on Font Awesome's site.
+
+### Bug Fixes
+
+* Fix code block extra white-space when using [Jekyll's highlight tag](https://jekyllrb.com/docs/templates/#code-snippet-highlighting) with `linenos`. [#1437](https://github.com/mmistakes/minimal-mistakes/issues/1437)
+* Round top-right corner of code block icon.
+* Remove Lunr.js trimmer and bring back colons. [#1445](https://github.com/mmistakes/minimal-mistakes/pull/1445)
+* Fix sticky `.sidebar` that overlaps main content when resizing viewport. [#1447](https://github.com/mmistakes/minimal-mistakes/issues/1447)
+
+## [4.8.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.8.1)
+
+### Enhancements
+
 * Add linkback functionality to author avatar and name in sidebar via `author.home`. [#1386](https://github.com/mmistakes/minimal-mistakes/pull/1386)
+* Add Japanese localized UI text strings. [#1411](https://github.com/mmistakes/minimal-mistakes/pull/1411)
+* Update Lunr.js to 2.1.5 [#1419](https://github.com/mmistakes/minimal-mistakes/pull/1419)
+
+### Bug Fixes
+
+* Fixed broken link to Staticman's page [#1422](https://github.com/mmistakes/minimal-mistakes/pull/1422)
+* Fix Lunr search to work with number tags. [#1409](https://github.com/mmistakes/minimal-mistakes/issues/1409) [#1419](https://github.com/mmistakes/minimal-mistakes/pull/1419)
 
 ## [4.8.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.8.0)
 
