@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-remote_theme             : "mmistakes/minimal-mistakes"
+remote_theme             : "mmistakes/minimal-mistakes@seo-fixes"
 
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
@@ -56,6 +56,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
 
 # SEO Related
 google_site_verification : "UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" # Replace this with your ID, or delete
