@@ -18,14 +18,4 @@ Then switching between Rubies is easy.
 
 `rvm get stable` - Upgrades rvm to the latest stable version available.
 
-`rvm list   
-
-rvm rubies
-
-=* ruby-2.2.1 [ x86_64 ]
-   ruby-2.4.2 [ x86_64 ]
-
-# => - current
-# =* - current && default
-#  * - default
-`
+`rvm list`
