@@ -6,6 +6,26 @@ RVM Commands - Obviously not a comprehensive list. Just some commands I use freq
 
 `rvm list known`  -  Shows all versions of Ruby available for installation.
 
-`rvm install 2.2.7`
+`rvm install 2.2.7` - Installs Ruby version 2.2.7
 
 Then switching between Rubies is easy.
+
+`rvm use 2.2.7`
+
+`ruby -v` - Check which version of Ruby is loaded.
+`which ruby` - Shows the path to the
+
+
+`rvm get stable` - Upgrades rvm to the latest stable version available.
+
+`rvm list   
+
+rvm rubies
+
+=* ruby-2.2.1 [ x86_64 ]
+   ruby-2.4.2 [ x86_64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+`
