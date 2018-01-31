@@ -13,7 +13,8 @@ Then switching between Rubies is easy.
 `rvm use 2.2.7`
 
 `ruby -v` - Check which version of Ruby is loaded.
-`which ruby` - Shows the path to the
+
+`which ruby` - Shows the path to the Ruby that is running.
 
 
 `rvm get stable` - Upgrades rvm to the latest stable version available.
