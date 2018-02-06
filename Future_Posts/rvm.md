@@ -2,7 +2,7 @@ I use RVM to manage Ruby on my Mac laptop.  RVM is very cool and has a lot of gr
 
 I won't go over installation here. The [RVM](https://rvm.io/rvm/install) site has detailed installation instructions.
 
-RVM Commands - Obviously not a comprehensive list. Just some commands I use frequently.
+RVM Commands - Not a comprehensive list. Just some commands I use frequently.
 
 `rvm list known`  -  Shows all versions of Ruby available for installation.
 
