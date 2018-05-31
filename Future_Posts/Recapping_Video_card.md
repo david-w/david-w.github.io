@@ -17,7 +17,7 @@ So I busted out this old thing:
 PIC OF SOLDERING GUN
 
 Yes, I know that's not the right tool for the job but I don't normally do electronics work so I don't have a soldering station. I also know it's never a good idea to use old capacitors to replace old failed capacitors. But I had nothing to lose since the card was already broken.
-I really like old tools. I have three newer soldering guns that don't work anywhere near as well as this old one. It gets red hot very fast. (and makes the room lights dim!)  Everything I read about re-capping boards said you have to have a hot iron and work quickly. Heat can destroy components.
+I really like old tools. I have three newer soldering guns that don't work anywhere near as well as this old one. It gets red hot very fast. (and makes the room lights dim.)  Everything I read about re-capping boards said you have to have a hot iron and work quickly. Heat can destroy components.
 
 I was able to dig up an old motherboard that had the right value capacitors that still looked good.  So I de-soldered them.  
 
