@@ -1,3 +1,9 @@
+---
+title: "Mazda CX-9 3.7L Fuel Injector Replacement"
+categories: [auto, mazda, repair]  
+---
+
+
 ## Mazda CX-9 3.7L Fuel Injector Replacement
 
 As I was leaving work yesterday, I felt it as soon as I started my car.  By "it" I mean a misfire.  I won't explain the feeling because if you are reading this, then you likely already know what I'm talking about.  
@@ -36,7 +42,7 @@ Three things to think about beforehand:
 
 8. Disconnect the fuel line.  Have a rag ready to catch any fuel that escapes.  Go easy on the plastic clip that holds the fuel line to the rail (fuel distributor). If you break that you will be replacing the fuel line.
 
-9. Unbolt and remove the fuel rail (distributor).  According to the service manual, the injectors are supposed to pull out of the intake manifold when the fuel rail comes out.  I have done this job twice, and both times it didn't work that way for me. When I remove the fuel rail, most of the injectors stay in the manifold and only one or two come out with the rail.  There are metal clips that hold the injectors to the rail and also keep the injectors from rotating.  For me, the bond between the injectors and the manifold was stronger than the clips and the rail pulled off without the injectors. When that happens, the fuel from the rail and the top of the injectors pours out onto the manifold.  Have rags ready!  The first time I did this job I wasn't ready for the fuel and there was enough to fill up the small area around the injectors and overflow.  I ended up with a small puddle on the ground.
+9. Unbolt and remove the fuel rail (fuel distributor).  According to the service manual, the injectors are supposed to pull out of the intake manifold when the fuel rail comes out.  I have done this job twice, and both times it didn't work that way for me. When I remove the fuel rail, most of the injectors stay in the manifold and only one or two come out with the rail.  There are metal clips that hold the injectors to the rail and also keep the injectors from rotating.  For me, the bond between the injectors and the manifold was stronger than the clips and the rail pulled off without the injectors. When that happens, the fuel from the rail and the top of the injectors pours out onto the manifold.  Have rags ready!  The first time I did this job I wasn't ready for the fuel and there was enough to fill up the small area around the injectors and overflow.  I ended up with a small puddle on the ground.
 
 10. Replace the bad injector.
 
