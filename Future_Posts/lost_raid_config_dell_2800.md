@@ -27,4 +27,4 @@ Here is what I did to solve the problem:
 7. Check RAID config with Control-M when the RAID controller posts.
 
 
-All good. The server came up with the RAID config intact.  At this point after completing the steps above, I'm confident that I could have just changed the BIOS config to RAID without disconnecting the drives. However, the part that said "data loss will occur" was enough to make me pause.
+All good. The server came up with the RAID config intact.  At this point after completing the steps above, I'm confident that I could have just changed the BIOS config to RAID without disconnecting the drives. 
