@@ -12,7 +12,6 @@ I'm using macOS to create the stick, but the steps to do this on a Linux box are
 
 
 1. Download the iso file you wish to use.
-
  ###### **Note: The following command is only used if you are going to use the usb stick to install an OS on a Mac. macOS uses .dmg files and this step converts the .iso to a .dmg file.  Then simply substitute the converted .dmg in step 6.**
         hdiutil convert /path/to/downloaded.iso -format UDRW -o /path/to/converted.dmg2  
 
