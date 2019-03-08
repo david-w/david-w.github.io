@@ -13,27 +13,32 @@ I'm using macOS to create the stick, but the steps to do this on a Linux box are
 
 1. Download the iso file you wish to use.
 
- ###### **Note: The following command is only used if you are going to use the usb stick to install an OS on a Mac. Mac OS uses .dmg files and this step converts the .iso to a .dmg file.  Then simply substitute the converted .dmg in step 6.**
+ ###### **Note: The following command is only used if you are going to use the usb stick to install an OS on a Mac. macOS uses .dmg files and this step converts the .iso to a .dmg file.  Then simply substitute the converted .dmg in step 6.**
         hdiutil convert /path/to/downloaded.iso -format UDRW -o /path/to/converted.dmg2  
 
 2. Run
+
         diskutil list
    Note which devices are present.
 
 3. Insert usb drive.
 
 4. Run
+
        diskutil list
    again. This time note the additional device. Example:(/dev/disk2)
 
 5. Unmount the usb drive using the device name from step 4.
+
        diskutil unmountDisk /dev/disk2
 
 6. Run
+
        sudo dd if=/path/to/downloaded.iso of=/dev/disk2 bs=1m
    ###### **Make sure you are writing to the correct device before hitting return! dd is powerful, especially with sudo and will blow away data without warning.**
 
 7. Finally, eject the usb stick.
+
        diskutil eject /dev/disk2
 
 That's it.....easy!
