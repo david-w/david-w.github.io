@@ -1,5 +1,14 @@
+---
+title: "Make a USB stick act like a bootable CD for macOS"
+categories: [macOS, .iso, .dmg, linux]  
+---
+
+
+## Make a USB stick act like a bootable CD for MacOS
+
+
 This is how I use a usb stick (aka flash-drive) to behave like a bootable CD.  This is not the way to create a bootable usb stick, for installing a live OS.  That is a different procedure altogether.  This is an easy method to make a stick to install Linux on a PC, but I also include the process to convert the .iso to a .dmg for installation on a Mac.
-I'm using a Mac to create the stick, but the steps to do this on a Linux box are similar.
+I'm using macOS to create the stick, but the steps to do this on a Linux box are similar.
 
 
 1. Download the iso file you wish to use.
