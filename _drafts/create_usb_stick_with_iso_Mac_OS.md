@@ -23,10 +23,10 @@ I'm using macOS to create the stick, but the steps to do this on a Linux box are
 
 3. Insert usb drive.
 
-4. Run
+4. Again, run
 
        diskutil list
-   again. This time note the additional device. Example:(/dev/disk2)
+   This time note the additional device. Example:(/dev/disk2)
 
 5. Unmount the usb drive using the device name from step 4.
 
