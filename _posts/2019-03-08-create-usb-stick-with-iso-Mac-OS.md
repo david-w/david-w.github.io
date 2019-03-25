@@ -39,7 +39,7 @@ I'm using macOS to create the stick, but the steps to do this on a Linux box are
 
 6. Run
 
-`sudo dd if=/path/to/downloaded.iso of=/dev/disk2 bs=1m`
+        `sudo dd if=/path/to/downloaded.iso of=/dev/disk2 bs=1m`
 ##### **Make sure you are writing to the correct device before hitting return! dd is powerful, especially with sudo and will blow away data without warning.**
 
 
