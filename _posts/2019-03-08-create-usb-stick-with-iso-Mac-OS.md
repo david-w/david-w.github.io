@@ -1,6 +1,7 @@
 ---
 title: "Make a USB stick act like a bootable CD on macOS"
-categories: [macOS, .iso, .dmg, linux]  
+categories: [macOS, .iso, .dmg, linux]
+layout: "single"  
 ---
 
 
@@ -41,11 +42,11 @@ I'm using macOS to create the stick, but the steps to do this on a Linux box are
         diskutil unmountDisk /dev/disk2
 
 
-6. Run  
+6. Run\* 
 
         sudo dd if=/path/to/downloaded.iso of=/dev/disk2 bs=1m  
 
-   **Make sure you are writing to the correct device before hitting return! dd is powerful, especially with sudo and will blow away data without warning.**
+   ***\*WARNING:*** **Make sure you are writing to the correct device before hitting return! dd is powerful, especially with sudo and will blow away data without warning.  Really!**
    {: .notice--danger}
 
 
@@ -54,4 +55,4 @@ I'm using macOS to create the stick, but the steps to do this on a Linux box are
         diskutil eject /dev/disk2
 
 
-That's it.....easy!
+That's it!
