@@ -1,13 +1,22 @@
-I was in a jam.
+---
+title: "Recapping a video card"
+layout: "single"  
+---
 
-The complete tale is long and boring, but I'll try to give you the super condensed backstory. At work, we need a Mac running a specific older version of OS X around 10.6.  Currently, we have an old MacPro tower that we use and recently it has been showing it's age.  It started out as random lock ups that could be fixed with a reboot.  As the problem progressed, occasionally the screen would start flashing. Rebooting would fix this as well.  I figured it was a driver issue that I needed to straighten out, but at the time there were more pressing problems to deal with. I'd get to it soon.
+**I was in a jam.**
+
+The complete tale is long and boring, but I'll try to give you the super condensed backstory. At work, we need a Mac running a specific older version of MacOS around 10.6.  Currently, we have an old MacPro tower that we use and recently it has been showing it's age.  It started out as random lock ups that could be fixed with a reboot.  As the problem progressed, occasionally the screen would start flashing. Rebooting would fix this as well.  I figured it was a driver issue that I needed to straighten out, but at the time there were more pressing problems to deal with. I'd get to it soon.
 
 Starting up in safe mode doesn't load all the kernel extensions, and that worked for a week or two.  Some theorized that there was an OS update that was not compatible with the older video hardware that was in this box (NVIDIA GeForce 7300 GT).  I'm guessing it just temporarily took some load off the card which made it work better for a while.
 
 Then, it stopped working completely. On startup, as soon as the kernel loaded the video, the display would flash like a strobe light.  I pulled the card out and saw this:
 
-PIC OF CARD
+<figure>
+  <img src="/images/mac_video_card_fix/IMG_5446.jpg" alt="pic of bulging capacitors">
+  <figcaption>Look at the bulging capacitors!</figcaption>
+</figure>
 
+![bulging capacitors](/images/mac_video_card_fix/IMG_5446.jpg)
 
 So I needed a new video card. However there are only a few video cards that work in this box with the specific OS I need to run, none of which are still manufactured.  I was able to pick up two used cards on the cheap, but it would take a couple of days to get them.
 
