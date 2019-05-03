@@ -1,7 +1,6 @@
 ---
 title: "Mazda CX-9 3.7L Fuel Injector Replacement"
 categories: [auto, mazda, repair]
-classes: wide
 gallery:
   - image_path: /images/mazda_fuel_injectors/18_clip1.jpg
     alt: "injector clip 1"
@@ -9,7 +8,7 @@ gallery:
     alt: "injector clip 2"
   - image_path: /images/mazda_fuel_injectors/21_clip4.jpg
     alt: "injector clip 4"  
-
+toc: true
 ---
 
 
@@ -25,7 +24,7 @@ So I drove it. I'm not saying this is a good idea. In fact I know it's not a goo
 
 Today, I borrowed a car to get to work and I picked up the parts.  It's not very difficult to do but it takes some time.
 
-Three things to think about beforehand:
+### Three things to think about beforehand: ###  
 
 *  KNOW WHICH INJECTOR IS BAD BEFORE STARTING THIS PROCEDURE.
 *  It's a good idea to have some extra injector o-rings.  They are inexpensive, and you may need some.
@@ -47,7 +46,7 @@ Three things to think about beforehand:
 
      <img src="{{ site.url }}{{ site.baseurl }}/images/mazda_fuel_injectors/5_time_to_clean.jpg" alt="clean me please">   
 
-    This is a great time to clean the throttle body.  
+    This is a great time to clean the throttle body. 
 
     <img src="{{ site.url }}{{ site.baseurl }}/images/mazda_fuel_injectors/6_difficult.jpg" alt="hidden hoses">  
 
