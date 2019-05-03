@@ -1,6 +1,7 @@
 ---
 title: "Mazda CX-9 3.7L Fuel Injector Replacement"
 categories: [auto, mazda, repair]
+classes: wide
 gallery:
   - image_path: /images/mazda_fuel_injectors/18_clip1.jpg
     alt: "injector clip 1"
