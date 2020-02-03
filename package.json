@@ -32,6 +32,6 @@
     "build:js": "npm run uglify && npm run add-banner"
   },
   "dependencies": {
-    "npm": "^6.13.2"
+    "npm": "^6.13.4"
   }
 }
