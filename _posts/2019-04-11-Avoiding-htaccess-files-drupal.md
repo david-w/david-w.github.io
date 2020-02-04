@@ -1,27 +1,29 @@
 ---
-title: "Drupal v6 and htaccess files"
-layout: "single"  
+title: "Avoiding htaccess files with Drupal sites"
+layout: "single"
+classes: wide  
 ---
 
 
 When I first started using Apache HTTP server on Linux, every reference to maximizing Apache's performance said I should not use .htaccess files if possible. In fact, taken right from  Apache Cookbook 2nd Edition - O'Reilly, ".htaccess files cause a substantial reduction in Apache's performance." Even if using .htaccess files would cause minimal performance issues, I'd have to think twice about using them.
 
-When I started using Drupal, I was surprised that there wasn't more discussion about how to avoid using .htaccess altogether. I did find a couple of threads on http://www.drupal.org , but not as much as I would have imagined.
+When I started using Drupal, I was surprised that there wasn't more discussion about how to avoid using .htaccess altogether. I did find a couple of threads on http://www.drupal.org , but not as much as I would have imagined.  
+
+
+Drupal needs the directives in the .htaccess file that it comes with, but I incorporate those directly into my Apache config.  
 
 
 
-Here is how I handle avoiding .htaccess files in Drupal installations.
+
+
+  Note:  The following notes describe incorporating the core Drupal .htaccess file directly into the Apache config.  I am not a security expert, however, I believe this is a safe method to control directories. To use this method, obviously you need to be able to modify Apache config files directly.  If you are using a hosted server, and don't have access to Apache then you're TSOL. (if you are on a hosted server, and using .htaccess is necessary, this site has info for common configurations htaccess-guide.com) It's also worth noting that with each Drupal core update, the .htaccess file included with the newer version must be checked against the currently running configuration. Luckily, there is an id at the bottom of the Drupal .htaccess file for easy reference.  If the version id code does not change, there is no need to replace the running config.
+{: .notice--info}
+
+#### ( For clarification, I usually configure Apache to use Virtual Hosts, even if I am only using it for one site. These notes reflect a Virtual Host environment using Apache2 on Linux) ####   
 
 
 
-( For clarification, I usually configure Apache to use Virtual Hosts, even if I am only using it for one site. These notes reflect a Virtual Host environment using Apache2 on Linux)
-
-
-
-     Note:  The following notes describe incorporating the core Drupal .htaccess file directly into the Apache config.  I am not a security expert, however, I believe this is a safe method to control directories. To use this method, obviously you need to be able to modify Apache config files directly.  If you are using a hosted server, and don't have access to Apache then you're TSOL. (if you are on a hosted server, and using .htaccess is necessary, this site has info for common configurations htaccess-guide.com) It's also worth noting that with each Drupal core update, the .htaccess file included with the newer version must be checked against the currently running configuration. Luckily, there is an id at the bottom of the Drupal .htaccess file for easy reference.  If the version id code does not change, there is no need to replace the running config.
-
-
-     I incorporate the Drupal .htaccess file into my virtual host configuration file like this:
+I incorporate the Drupal .htaccess file into my virtual host configuration file like this:
 
 ```sh
 <VirtualHost *:80>
@@ -126,8 +128,15 @@ Here is how I handle avoiding .htaccess files in Drupal installations.
 ```
 
 
-First, I use diff to check the changes between the old and the new .htaccess files. ( I could use sdiff, and combine the files, but this way I can edit fast and easy using Nano)
-Then I use Nano to make the modification to the config file:  
+First, I use diff to check the changes between the old and the new .htaccess files. ( I could use sdiff, and combine the files, but this way I can edit fast and easy using Nano)  
+Next I use Nano to make the modification to the Apache config file:  
 
 
-`$ sudo nano /etc/apache2/sites-available/default`
+`$ sudo nano /etc/apache2/sites-available/default`  
+
+Since I never modify the Drupal supplied .htaccess file, I can patch it with nano.  
+
+- Move cursor to the beginning of the .htaccess section.  
+- Ctrl-k to cut text (remove entire section)  
+- Ctrl-r to insert the contents of the new .htaccess file and save.  
+- Reload Apache.  
