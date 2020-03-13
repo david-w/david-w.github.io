@@ -1,0 +1,50 @@
+
+PROBLEM-
+dw:david-w.github.io dw$ brew update
+git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+Error: homebrew/homebrew-versions does not exist! Run 'brew untap homebrew/homebrew-versions'
+
+SOLUTION-
+Like it says, run this:  'brew untap homebrew/homebrew-versions'
+
+
+
+
+PROBLEM-
+==> Pouring python-3.7.7.high_sierra.bottle.tar.gz
+Error: The `brew link` step did not complete successfully
+The formula built, but is not symlinked into /usr/local
+Could not symlink bin/2to3
+Target /usr/local/bin/2to3
+already exists. You may want to remove it:
+  rm '/usr/local/bin/2to3'
+
+To force the link and overwrite all conflicting files:
+  brew link --overwrite python
+
+To list all files that would be deleted:
+  brew link --overwrite --dry-run python
+
+Possible conflicting files are:
+/usr/local/bin/2to3 -> /Library/Frameworks/Python.framework/Versions/3.6/bin/2to3
+/usr/local/bin/idle3 -> /Library/Frameworks/Python.framework/Versions/3.6/bin/idle3
+/usr/local/bin/pydoc3 -> /Library/Frameworks/Python.framework/Versions/3.6/bin/pydoc3
+/usr/local/bin/python3 -> /Library/Frameworks/Python.framework/Versions/3.6/bin/python3
+/usr/local/bin/python3-config -> /Library/Frameworks/Python.framework/Versions/3.6/bin/python3-config
+/usr/local/bin/pyvenv -> /Library/Frameworks/Python.framework/Versions/3.6/bin/pyvenv
+Error: Permission denied @ dir_s_mkdir - /usr/local/Frameworks
+
+
+
+SOLUTION-
+
+running 'brew doctor'
+shows this:
+Warning: The following directories do not exist:
+/usr/local/Frameworks
+/usr/local/sbin
+
+You should create these directories and change their ownership to your account.
+  sudo mkdir -p /usr/local/Frameworks /usr/local/sbin
+  sudo chown -R $(whoami) /usr/local/Frameworks /usr/local/sbin
