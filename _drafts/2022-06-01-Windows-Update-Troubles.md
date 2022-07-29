@@ -12,9 +12,9 @@ I have two workstations that have not received updates.  They currently run Wind
 NOTE: These were configured for operating manufacturing equipment and came pre-configured running a 32-bit OS on a 64-bit processor.  I think the software that runs the equipment are older 32-bit applications.  
 
 SYMPTOMS
-• When checking for Windows updates, the following error was showing: (0x80070057)
-• Workstations did not show up as connected on the WSUS server console.
-• Event Viewer shows the following relevant messages:
+* When checking for Windows updates, the following error was showing: (0x80070057)
+* Workstations did not show up as connected on the WSUS server console.
+* Event Viewer shows the following relevant messages:
     - wuaserv syatem error "87" has occurred.
     - DCOM got error 87 attempting to start the service wuauserv with arguments "Unavailable" in order to run the server:
     - Event ID 7000: Service Start Failure.
