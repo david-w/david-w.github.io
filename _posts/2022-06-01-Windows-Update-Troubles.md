@@ -37,11 +37,17 @@ net stop cryptsvc
 Ren %systemroot%\SoftwareDistribution SoftwareDistribution.bak
 Ren %systemroot%\System32\catroot2 catroot2.bak
 ````
-4. 
+4.
 
 
 
-
+Also ran the following commands per Microsoft docs:
+````sh
+sfc/ scannow
+Dism /Online /Cleanup-Image /CheckHealth
+Dism /Online /Cleanup-Image /ScanHealth
+Dism /Online /Cleanup-Image /RestoreHealth
+````
 
 
 I was able to get past that (or at least change the error) by modifying the wuauserv service with Regedit.
@@ -50,3 +56,12 @@ I compared the registry values of the service with a workstation that was receiv
 I added the following to ImagePath: %systemroot%\System32\svchost.exe -k netsvcs -p
 
 After that, the workstation gave a different error
+
+
+
+
+* Read Windows Update Logs using PowerShell:
+Open an elevated PowerShell
+````sh
+Get-WindowsUpdateLog
+````
