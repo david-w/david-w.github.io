@@ -41,8 +41,8 @@ Ren %systemroot%\SoftwareDistribution SoftwareDistribution.bak
 Ren %systemroot%\System32\catroot2 catroot2.bak
 ````
 
-**NOTE:** Step 4 may not be needed and should be skipped the first time attempting to reset Windows Update. Only use this if the first attempt fails.
-{: .notice--danger}  
+  **NOTE:** Step 4 may not be needed and should be skipped the first time attempting to reset Windows Update. Only use this if the first attempt fails.
+  {: .notice--danger}  
 
 4. Reset the security descriptor for the BITS & Windows Update services:
 ````plaintext
