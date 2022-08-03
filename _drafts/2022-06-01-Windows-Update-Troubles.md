@@ -20,42 +20,45 @@ NOTE: These were configured for operating manufacturing equipment and came pre-c
     - DCOM got error 87 attempting to start the service wuauserv with arguments "Unavailable" in order to run the server:
     - Event ID 7000: Service Start Failure.
     - Event 7000 Service Control Manager error.
+* Oddly, the time was wrong (off by 6 mins.) even though it was configured to syncronize with the domain controller via group policy.  
+* Even more oddly, the Windows Update Log had lots of entries with unknown (No Format Information found) and a date of 12/31/1600.
+
 
 First I completed all the regular steps recommended by Microsoft to reset the Windows update components.
 Open a command prompt as an administrator and enter the following commands:
-1. Stop these services:
+**1.** Stop these services:
 ````sh
 net stop bits
 net stop wuauserv
 net stop cryptsvc
 ````
 
-2. Delete the qmgr*.dat files:
+**2.** Delete the qmgr*.dat files:
 ````console
 Del "%ALLUSERSPROFILE%\Application Data\Microsoft\Network\Downloader\qmgr*.dat"
 ````
 
-3. Rename the SoftwareDistribution and catroot2 folders:
+**3.** Rename the SoftwareDistribution and catroot2 folders:
 ````console
 Ren %systemroot%\SoftwareDistribution SoftwareDistribution.bak
 Ren %systemroot%\System32\catroot2 catroot2.bak
 ````
 
-  **NOTE:** Step 4 may not be needed and should be skipped the first time attempting to reset Windows Update. Only use this if the first attempt fails.
-  {: .notice--danger}  
+      **NOTE:** Step 4 may not be needed and should be skipped the first time attempting to reset Windows Update. Only use this if the first attempt fails.
+      {: .notice--danger}  
 
-4. Reset the security descriptor for the BITS & Windows Update services:
+**4.** Reset the security descriptor for the BITS & Windows Update services:
 ````plaintext
 sc.exe sdset bits D:(A;CI;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)
 sc.exe sdset wuauserv D:(A;;CCLCSWRPLORC;;;AU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)
 ````
 
-5. Change to the system32 directory:
+**5.** Change to the system32 directory:
 ````console
 cd /d %windir%\system32
 ````
 
-6. Reregister the BITS and Windows Update files:
+**6.** Reregister the BITS and Windows Update files:
 NOTE: Not all of the following may be needed.  In my case, some gave errors that they were not installed.
 ````console
 regsvr32.exe atl.dll
@@ -96,36 +99,57 @@ regsvr32.exe muweb.dll
 regsvr32.exe wuwebv.dll
 ````
 
-7. Reset Winsock:
+**7.** Reset Winsock:
 ````console
 netsh winsock reset
 ````
 
-8. Finally, restart the services:
+**8.** Finally, restart the services:
 ````sh
 net start bits
 net start wuauserv
 net start cryptsvc
 ````
 
-Also ran the following commands per Microsoft docs:
-````sh
-sfc/ scannow
-Dism /Online /Cleanup-Image /CheckHealth
-Dism /Online /Cleanup-Image /ScanHealth
-Dism /Online /Cleanup-Image /RestoreHealth
-````
+ I also ran the following commands per Microsoft docs:  
+ ````sh
+ sfc/ scannow
+ Dism /Online /Cleanup-Image /CheckHealth
+ Dism /Online /Cleanup-Image /ScanHealth
+ Dism /Online /Cleanup-Image /RestoreHealth
+ ````
+
+**NOTE: None of the above steps had any effect on the workstations.**
+{: .notice--danger}  
 
 
-I was able to get past that (or at least change the error) by modifying the wuauserv service with Regedit.
+I was able to get past the original error (or at least change the error) by modifying the wuauserv service with Regedit.
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv
 I compared the registry values of the service with a workstation that was receiving updates, and noticed that the ImagePath was missing.
-I added the following to ImagePath: %systemroot%\System32\svchost.exe -k netsvcs -p
-
-After that, the workstation gave a different error(s)
+I added the following to ImagePath: %systemroot%\System32\svchost.exe -k netsvcs -p  
 
 
+After modifying the wuauserv service, at least the workstations showed up in the list of end points on the WSUS server.
+{: .notice--success}
 
+After that, the workstation gave a different error(s)  
+(0x8024500c) - Agent exit code.   
+Related - EP: error: 0x8024500C: -failed to get SLS data.   
+Related - Service exit code = 0x240001   
+Related - Failed to syncronize, error = 0x8007000E   
+Related - Failed to syncronize, error = 0x8024000B   
+Related - Service CheckAccessByPolicy rejected call, hr=0x80244011   
+Related - PopulateDataStore failed 0x8024000e
+
+After getting the workstation connected to the WSUS server, things were still broken with the following errors showing in the Windows Update Log.  
+
+
+|   Error          | Reported by       |   Information                                                     |
+| ---------------- | ------------------| ----------------------------------------------------------------- |
+| (0x8024500c)     | Misc              | EP: error: 0x8024500C : failed to get SLS data                    |
+| (0x8024500c)     | ProtocolTalker    | Initialization failed for ProtocolTalker Context 0x8024500C       |
+| (0x240001)       | Shared            |       |
+| [Jane Bloggs](#) |                       | With hair like that?! Enough said.                                |
 
 * Read Windows Update Logs using PowerShell:
 Open an elevated PowerShell
