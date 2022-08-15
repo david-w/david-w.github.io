@@ -3,6 +3,8 @@ title: "Windows Update Trouble Using WSUS Server"
 layout: "single"
 ---
 
+
+
 I am not a Windows expert.  So personally, I would not follow my instructions at all.  Seriously.
 
 I make no claim that this is the correct way to solve this problem.  In fact, it's probably not.  This is simply a record of my steps to hopefully solve the problem of two Windows workstations not receiving updates.
@@ -10,16 +12,16 @@ I make no claim that this is the correct way to solve this problem.  In fact, it
 At work we use a Windows Server Update Services (WSUS) server to control how our endpoints receive Windows updates.  An Active Directory group policy specifies the settings for updates to run unattended overnight on Tier 2 workstations once they have been approved and tested on Tier 1.  It's a pretty standard setup.
 
 I have two workstations that have not received updates.  They currently run Windows 10 Enterprise 2016 LTSB.  
-NOTE: These were configured for operating manufacturing equipment and came pre-configured running a 32-bit OS on a 64-bit processor.  I think the software that runs the equipment are older 32-bit applications.  
+NOTE: These are used for operating manufacturing equipment and came pre-configured running a 32-bit OS on a 64-bit processor.  I think the software that runs the equipment are older 32-bit applications.  
 
 ### SYMPTOMS
 * When checking for Windows updates, the following error was showing: (0x80070057)
 * Workstations did not show up as connected on the WSUS server console.
 * Event Viewer shows the following relevant messages:
-    - wuaserv syatem error "87" has occurred.
-    - DCOM got error 87 attempting to start the service wuauserv with arguments "Unavailable" in order to run the server:
-    - Event ID 7000: Service Start Failure.
-    - Event 7000 Service Control Manager error.
+  - wuaserv syatem error "87" has occurred.
+  - DCOM got error 87 attempting to start the service wuauserv with arguments "Unavailable" in order to run the server:
+  - Event ID 7000: Service Start Failure.
+  - Event 7000 Service Control Manager error.
 * Oddly, the time was wrong (off by 6 mins.) even though it was configured to syncronize with the domain controller via group policy.  
 * Even more oddly, the Windows Update Log had lots of entries with unknown (No Format Information found) and a date of 12/31/1600.
 
@@ -155,4 +157,11 @@ After getting the workstation connected to the WSUS server, things were still br
 Open an elevated PowerShell
 ````powershell
 Get-WindowsUpdateLog
+````
+* Viewing Windows Update settings using PowerShell:
+Open an elevated PowerShell
+````powershell
+Get-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate'
+Get-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU'
+$(New-Object -ComObject "Microsoft.Update.ServiceManager").Services | Select-Object Name, IsDefaultAUService
 ````
