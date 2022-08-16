@@ -183,5 +183,7 @@ https://docs.microsoft.com/en-us/archive/blogs/wsus/improving-dual-scan-on-1607
 * Non-Microsoft links
 Good WSUS setup guide
 https://www.ajtek.ca/guides/how-to-setup-manage-and-maintain-wsus-part-1-choosing-your-server-os/
+Great guide for fixing clients not reporting to wsus
+https://www.ajtek.ca/wsus/client-machines-not-reporting-to-wsus-properly/
 Great info on "Dual-Scan", and Windows Update error 0x8024500c
-https://blog.tofte-it.dk/wsus-windows-10-clients-error-0x8024500c
+https://blog.tofte-it.dk/wsus-windows-10-clients-error-0x8024500c/
