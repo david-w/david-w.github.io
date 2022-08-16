@@ -165,3 +165,23 @@ Get-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate'
 Get-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU'
 $(New-Object -ComObject "Microsoft.Update.ServiceManager").Services | Select-Object Name, IsDefaultAUService
 ````
+* Some good Microsoft links relating to WSUS, Windows Updates, etc.
+Windows Update error codes
+https://docs.microsoft.com/en-us/windows/deployment/update/windows-update-error-reference
+Deploying updates with WSUS and configuring automatic updates using Group Policy
+https://docs.microsoft.com/en-us/windows/deployment/update/waas-manage-updates-wsus
+Troubleshooting WSUS client issues
+https://docs.microsoft.com/en-us/troubleshoot/mem/configmgr/troubleshoot-issues-with-wsus-client-agents
+WSUS Maintenance Guide
+https://docs.microsoft.com/en-us/troubleshoot/mem/configmgr/wsus-maintenance-guide
+Re-register Windows clients in WSUS server
+https://docs.microsoft.com/en-us/troubleshoot/windows-server/deployment/re-register-windows-clientserver-in-wsus
+Microsoft info on Dual-Scan
+https://docs.microsoft.com/en-us/archive/blogs/wsus/demystifying-dual-scan
+https://docs.microsoft.com/en-us/archive/blogs/wsus/improving-dual-scan-on-1607
+
+* Non-Microsoft links
+Good WSUS setup guide
+https://www.ajtek.ca/guides/how-to-setup-manage-and-maintain-wsus-part-1-choosing-your-server-os/
+Great info on "Dual-Scan", and Windows Update error 0x8024500c
+https://blog.tofte-it.dk/wsus-windows-10-clients-error-0x8024500c
