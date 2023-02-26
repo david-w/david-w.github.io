@@ -18,7 +18,7 @@ I'm using macOS to create the stick, but the steps to do this on a Linux box are
         hdiutil convert /path/to/downloaded.iso -format UDRW -o /path/to/converted.dmg2  
 
 
-2. Run  
+2. Run: 
 
         diskutil list  
 
