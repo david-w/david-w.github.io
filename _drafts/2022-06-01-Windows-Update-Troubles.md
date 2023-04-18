@@ -28,6 +28,7 @@ NOTE: These are used for operating manufacturing equipment and came pre-configur
 
 First I completed all the regular steps recommended by Microsoft to reset the Windows update components.
 Open a command prompt as an administrator and enter the following commands:
+
 **1.** Stop these services:
 ````sh
 net stop bits
