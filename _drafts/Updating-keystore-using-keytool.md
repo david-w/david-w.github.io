@@ -42,14 +42,14 @@ On my server, keytool is located at:
 For some reason, adding that location to my path wasn't working, so I executed commands using the full path to the keytool application. Since there is a space in the path that needed to be escaped, the actual commands I executed included:
 **"C\Program Files\Java\jre1.x.x_x\bin\keytool"**
 
-However, for ease of explanation, I am just going to use **C:\Apps\keytool** for the path to the application, and **C:\key\mykey.jks** as the path to the keystore and the required root/intermediate certs.
+Later I realized I could have just navigated to where the keytool application is located and executed the commands from there. So for ease of explanation, the commands listed assume that you've changed directory to the location where the keytool app is, and **C:\key\mykey.jks** is the path to the keystore and the required root/intermediate certs.
 
 The keystore is password protected, so you'll need the password to modify it.
 {: .notice--info}
 
 First, to see the contents of the existing keystore:
 
-    C:\Apps\keytool -list -keystore C:\key\mykey.jks
+    keytool -list -keystore C:\key\mykey.jks
 
 Note the names of the entries.  These are aliases.  When modifying certs, the same alias names must be used.
 
@@ -57,35 +57,35 @@ Next, we need to replace the root and intermediate certs in the correct order st
 
 So, delete the root1 alias:
 
-    C:\Apps\keytool -delete -alias root1 -keystore C:\key\mykey.jks
+    keytool -delete -alias root1 -keystore C:\key\mykey.jks
 
 Then, import the new root1 certificate:
 
-    C:\Apps\keytool -import -trustcacerts -file C:\key\CERTUM_TRUSTED_NETWORK_CA.crt -alias root1 -keystore C:\key\mykey.jks
+    keytool -import -trustcacerts -file C:\key\CERTUM_TRUSTED_NETWORK_CA.crt -alias root1 -keystore C:\key\mykey.jks
 
 The above command should return **"Certificate was added to keystore."**
 {: .notice--info}
 
 Delete the root2 alias:
 
-    C:\Apps\keytool -delete -alias root2 -keystore C:\key\mykey.jks
+    keytool -delete -alias root2 -keystore C:\key\mykey.jks
 
 Then import the new root2 certificate:
 
-    C:\Apps\keytool -import -trustcacerts -file C:\key\SSL_COM_ROOT_CERTIFICATION_AUTHORITY_RSA.crt -alias root2 -keystore C:\key\mykey.jks
+    keytool -import -trustcacerts -file C:\key\SSL_COM_ROOT_CERTIFICATION_AUTHORITY_RSA.crt -alias root2 -keystore C:\key\mykey.jks
 Delete the inter alias:
 
-    C:\Apps\keytool -delete -alias inter -keystore C:\key\mykey.jks
+    keytool -delete -alias inter -keystore C:\key\mykey.jks
 
 Then import the new intermediate certificate:
 
-    C:\Apps\keytool -import -trustcacerts -file C:\key\SSL_COM_RSA_SSL_SUBCA.crt -alias inter -keystore C:\key\mykey.jks
+    keytool -import -trustcacerts -file C:\key\SSL_COM_RSA_SSL_SUBCA.crt -alias inter -keystore C:\key\mykey.jks
 
 At this point the ssl.com docs say to use the same commands to import the new signed server certificate. The import worked and I got the same "Certificate was added to keystore" message, but the certificate was broken and Tomcat would not serve any web pages at all.
 
 **Note:** Here, I reverted back to the original keystore (since I backed it up) and performed the previous steps again.  When it came time to import the new signed certificate, I did **NOT** delete the alias for my signed server cert. I used the following command:
 
-    C:\Apps\keytool -import -file C:\key\my_server_name_here.crt -alias my_alias -keystore C:\key\mykey.jks
+    keytool -import -file C:\key\my_server_name_here.crt -alias my_alias -keystore C:\key\mykey.jks
 
 The above command should return **"Certificate reply was installed in keystore."**  This is important, and differs from the messages received when adding the root and intermediate certs to the keystore.
     {: .notice--info}
