@@ -81,9 +81,9 @@ Then import the new intermediate certificate:
 
     keytool -import -trustcacerts -file C:\key\SSL_COM_RSA_SSL_SUBCA.crt -alias inter -keystore C:\key\mykey.jks
 
-At this point the ssl.com docs say to use the same commands to import the new signed server certificate. The import worked and I got the same "Certificate was added to keystore" message, but the certificate was broken and Tomcat would not serve any web pages at all.
+**Note:** At this point the ssl.com docs say to use the same commands to import the new signed server certificate. The import worked and I got the same "Certificate was added to keystore" message, but the certificate was broken and Tomcat would not serve any web pages at all.
 
-**Note:** Here, I reverted back to the original keystore (since I backed it up) and performed the previous steps again.  When it came time to import the new signed certificate, I did **NOT** delete the alias for my signed server cert. I used the following command:
+Here, I reverted back to the original keystore (since I backed it up) and performed the previous steps again.  When it came time to import the new signed certificate, I did **NOT** delete the alias for my signed server cert. I used the following command:
 
     keytool -import -file C:\key\my_server_name_here.crt -alias my_alias -keystore C:\key\mykey.jks
 
