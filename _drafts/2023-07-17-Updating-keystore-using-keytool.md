@@ -99,7 +99,9 @@ The keytool docs were very helpful:
 
 ### ****Missing CERTUM root certificate.**
 
-When I downloaded my signed certificate from ssl.com, the root1 cert (CERTUM_TRUSTED_NETWORK_CA.crt) was missing. There were supposed to be 4 certificates to complete the chain of trust. There were only 3 available to download for Tomcat (Java). I checked the downloads for other formats as well and none included the root CA cert.  Thinking I was not understanding, I contacted ssl.com support who were as confused as I was.  They gave me the url to a repository that included all the root certs they use, which did include 4 different CERTUM certs, but none were the correct file type (.crt).  
+When I downloaded my signed certificate from ssl.com, the root1 cert (CERTUM_TRUSTED_NETWORK_CA.crt) was missing. There were supposed to be 4 certificates to complete the chain of trust. There were only 3 available to download for Tomcat (Java). I checked the downloads for other formats as well and none included the root CA cert.
 
-I ended up downloading it directly from CERTUM: https://www.certum.eu/en/cert_expertise_root_certificates/
+Thinking I was not understanding, I contacted ssl.com support who were as confused as I was.  They gave me the url to a repository that included all the root certs they use, which did include 4 different CERTUM certs, but none were the correct file type (.crt).  
+
+I ended up downloading it directly from CERTUM: [https://www.certum.eu/en/cert_expertise_root_certificates/](https://www.certum.eu/en/cert_expertise_root_certificates/)
 They had all their root certificates in many formats and I was able to download the one I needed as a .crt file.
