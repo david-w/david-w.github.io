@@ -40,7 +40,7 @@ my_server_name_here.crt	Signed Server Certificate
 On my server, keytool is located at:
 **C:\Program Files\Java\jre1.x.x_x\bin\keytool**
 For some reason, adding that location to my path wasn't working, so I executed commands using the full path to the keytool application. Since there is a space in the path that needed to be escaped, the actual commands I executed included:
-**"C\Program Files\Java\jre1.x.x_x\bin\keytool"** 
+**"C\Program Files\Java\jre1.x.x_x\bin\keytool"**
 Later I realized I could have just navigated to where the keytool application is located and executed the commands from there. So for ease of explanation, the commands listed assume that you've either changed directory to the location where the keytool app is, or have added the location to your user path, and **C:\key\mykey.jks** is the path to the keystore and the required root/intermediate certs.
 
 
@@ -88,16 +88,18 @@ Here, I reverted back to the original keystore (since I backed it up) and perfor
     keytool -import -file C:\key\my_server_name_here.crt -alias my_alias -keystore C:\key\mykey.jks
 
 The above command should return **"Certificate reply was installed in keystore."**  This is important, and differs from the messages received when adding the root and intermediate certs to the keystore.
-    {: .notice--info}
+{: .notice--warning}
 
 After that everything just worked.  
-Then, viewing the contents of the keystore using the -list switch, I had 3 entries listed as trustedCertEntry, and one listed as PrivateKeyEntry. Yay.
+Then, viewing the contents of the keystore using the -list switch, I had 3 entries listed as trustedCertEntry, and one listed as PrivateKeyEntry.
 
 The keytool docs were very helpful:
-https://docs.oracle.com/en/java/javase/18/docs/specs/man/keytool.html
+[https://docs.oracle.com/en/java/javase/18/docs/specs/man/keytool.html](https://docs.oracle.com/en/java/javase/18/docs/specs/man/keytool.html)
 
 
-**Missing CERTUM root certificate.
+### ****Missing CERTUM root certificate.**
+
 When I downloaded my signed certificate from ssl.com, the root1 cert (CERTUM_TRUSTED_NETWORK_CA.crt) was missing. There were supposed to be 4 certificates to complete the chain of trust. There were only 3 available to download for Tomcat (Java). I checked the downloads for other formats as well and none included the root CA cert.  Thinking I was not understanding, I contacted ssl.com support who were as confused as I was.  They gave me the url to a repository that included all the root certs they use, which did include 4 different CERTUM certs, but none were the correct file type (.crt).  
+
 I ended up downloading it directly from CERTUM: https://www.certum.eu/en/cert_expertise_root_certificates/
 They had all their root certificates in many formats and I was able to download the one I needed as a .crt file.
