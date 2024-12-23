@@ -41,7 +41,7 @@ On my server, keytool is located at:
 **C:\Program Files\Java\jre1.x.x_x\bin\keytool**
 For some reason, adding that location to my path wasn't working, so I executed commands using the full path to the keytool application. Since there is a space in the path that needed to be escaped, the actual commands I executed included:
 **"C\Program Files\Java\jre1.x.x_x\bin\keytool"**
-Later I realized I could have just navigated to where the keytool application is located and executed the commands from there. So for ease of explanation, the commands listed assume that you've either changed directory to the location where the keytool app is, or have added the location to your user path, and **C:\key\mykey.jks** is the path to the keystore and the required root/intermediate certs.
+Later I thought I should have just navigated to where the keytool application is located and executed the commands from there. So for ease of explanation, the commands listed assume that you've either changed directory to the location where the keytool app is, or have added the location to your user path, and **C:\key\mykey.jks** is the path to the keystore and the required root/intermediate certs.
 
 
 The keystore is password protected, so you'll need the password to modify it.
